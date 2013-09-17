@@ -8,7 +8,7 @@ description = "An implementation of a foreign key field for mongoengine " \
     "that references a Django model object."
 
 setup(
-    name='django-tablib',
+    name='django-mongoengine-foreignkey',
     version=mongofk.__version__,
     author='Joshua Ourisman',
     author_email='josh@bolsterlabs.com',
