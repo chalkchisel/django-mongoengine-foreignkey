@@ -36,6 +36,8 @@ class ForeignKey(BaseField):
         return id_
 
     def to_python(self, value):
+        if isinstance(value, self.model_obj):
+            return value
         return self.model.objects.get(pk=value)
 
     def prepare_query_value(self, op, value):
