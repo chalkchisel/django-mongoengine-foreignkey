@@ -43,6 +43,8 @@ class ForeignKey(BaseField):
     def prepare_query_value(self, op, value):
         if value is None:
             return None
+        if type(value) is int:
+            return value
 
         return self.to_mongo(value)
 
